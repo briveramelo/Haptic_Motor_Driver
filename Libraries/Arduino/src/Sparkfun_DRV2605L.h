@@ -19,15 +19,7 @@ local, and you've found our code helpful, please buy us a round!
 Distributed as-is; no warranty is given.
 ******************************************************************************/
 
-#if defined(ARDUINO) && ARDUINO >= 100
-	#include "Arduino.h"
-#else
-	#include "WProgram.h"
-	#include "pins_arduino.h"
-#endif
-
-#include <Wire.h>
-
+#include "application.h"
 
 //I2C address
 #define I2C_ADDR 0x5A

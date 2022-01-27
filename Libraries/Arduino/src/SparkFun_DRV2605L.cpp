@@ -19,14 +19,7 @@ local, and you've found our code helpful, please buy us a round!
 Distributed as-is; no warranty is given.
 ******************************************************************************/
 
-
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
-
-#include <Wire.h>
+#include <application.h>
 #include <Sparkfun_DRV2605L.h>
 
 SFE_HMD_DRV2605L::SFE_HMD_DRV2605L() 
@@ -85,7 +78,9 @@ void SFE_HMD_DRV2605L::Library(uint8_t lib)
 
 //Select waveform from list of waveform library effects 
 //data sheet page 60. This function selects the sequencer
-//and the effects from the library. 
+//and the effects from the library.
+//seq ranges from 0 - 7
+//wav ranges from 1 - 123 //https://cdn.sparkfun.com/datasheets/Robotics/drv2605l.pdf
 void SFE_HMD_DRV2605L::Waveform(uint8_t seq, uint8_t wav)
  {
   writeDRV2605L(WAVESEQ1+seq, wav);
