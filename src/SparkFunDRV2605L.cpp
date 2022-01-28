@@ -20,7 +20,7 @@ Distributed as-is; no warranty is given.
 ******************************************************************************/
 
 #include "application.h"
-#include "Sparkfun_DRV2605L.h"
+#include "SparkFunDRV2605L.h"
 
 SFE_HMD_DRV2605L::SFE_HMD_DRV2605L() 
 {
